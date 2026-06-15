@@ -6,7 +6,7 @@
 #         print a tidy line like:  Logged: Coffee for £3.50
 #         Use an f-string, and format the amount to 2 decimals with {amount:.2f}.
 # 💾 COMMIT:  "Stage 1: log a single expense"
-
+ 
 description = input("Name of the purchased item: \n")
 amount = float(input("what did it cost? \n"))
 print(f'logged: {description}: £{amount:.2f}')
@@ -23,3 +23,14 @@ print(f'logged: {description}: £{amount:.2f}')
 # 💡 Tip: A simple `if amount > 0` check beats a crash. We'll do proper
 #         error handling later (it's optional), so don't reach for try/except yet.
 # 💾 COMMIT:  "Stage 2: categorise expenses with a function"
+
+def categorise(amount):
+    if amount < 10:
+        return "small"
+    elif amount < 50:
+        return "medium"
+    else:
+        return "large"
+
+print(categorise(3.5))
+print(categorise(80))
