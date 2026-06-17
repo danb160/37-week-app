@@ -36,3 +36,22 @@ def categorise(amount):
 
 print(categorise(3.5))
 print(categorise(80))
+
+# ---------- Stage 3: Make it run (the menu loop) ----------
+# Lesson: A real program waits for you and keeps going until you quit. A
+#    `while True:` loop with a menu does exactly that. `break` exits the loop.
+# Task:   Build a menu loop that prints options and reads a choice:
+#              1) Add an expense   2) Quit
+#         For now, option 1 can just print "TODO: add". Option 2 should break.
+#         Anything else: print "Not a valid choice" and loop again.
+# 💾 COMMIT:  "Stage 3: interactive menu loop"
+
+
+# ---------- Stage 4: Remember many expenses (lists) ----------
+# Lesson: One expense is no use. A list holds many. .append() adds to it, and a
+#         for loop walks through it. len() tells you how many you have.
+# Task:   1) Make an empty list `expenses = []` before the loop.
+#         2) When the user adds an expense, append the amount to the list.
+#         3) Add a menu option "View all" that loops over the list and prints
+#            each amount, plus the running total (add them up in a loop).
+# 💾 COMMIT:  "Stage 4: store and total expenses"
