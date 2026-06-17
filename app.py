@@ -1,28 +1,29 @@
 # ---------- Stage 1: Log a single expense ----------
 # Lesson: Every program starts tiny. Grab a description (a string) and an
-#         amount (a number), then print them back nicely. Remember: input()
-#         ALWAYS hands you a string, so convert the amount with float().
+#    amount (a number), then print them back nicely. Remember: input()
+#    ALWAYS hands you a string, so convert the amount with float().
 # Task:   Ask for a description and an amount, store each in a variable, then
-#         print a tidy line like:  Logged: Coffee for £3.50
-#         Use an f-string, and format the amount to 2 decimals with {amount:.2f}.
+#    print a tidy line like:  Logged: Coffee for £3.50
+#    Use an f-string, and format the amount to 2 decimals with {amount:.2f}.
 # 💾 COMMIT:  "Stage 1: log a single expense"
- 
+
 description = input("Name of the purchased item: \n")
 amount = float(input("what did it cost? \n"))
 print(f'logged: {description}: £{amount:.2f}')
 
 # ---------- Stage 2: Functions & decisions ----------
 # Lesson: Right now your code runs once, top to bottom. Functions let you name
-#         a chunk of work and reuse it. if/elif/else lets the program make
-#         decisions. We'll size each expense: small / medium / large.
+#    a chunk of work and reuse it. if/elif/else lets the program make
+#    decisions. We'll size each expense: small / medium / large.
 # Task:   1) Write a function categorise(amount) that returns:
-#              "small"  if amount < 10
-#              "medium" if amount < 50
-#              "large"  otherwise
+#    "small"  if amount < 10
+#    "medium" if amount < 50
+#    "large"  otherwise
 #         2) Test it by printing categorise(3.5) and categorise(80).
 # 💡 Tip: A simple `if amount > 0` check beats a crash. We'll do proper
-#         error handling later (it's optional), so don't reach for try/except yet.
+#     error handling later (it's optional), so don't reach for try/except yet.
 # 💾 COMMIT:  "Stage 2: categorise expenses with a function"
+
 
 def categorise(amount):
     if amount < 10:
@@ -31,6 +32,7 @@ def categorise(amount):
         return "medium"
     else:
         return "large"
+
 
 print(categorise(3.5))
 print(categorise(80))
